@@ -1,7 +1,3 @@
-
-
-
-
 import './App.css';
 
 import React from 'react';
@@ -13,17 +9,18 @@ import ManageOrders from './pages/ManageOrders';
 import OrderDetails from './pages/OrderDetails';
 import Layout from './components/shared/Layout';
 
-// import { UserContextProvider } from './contexts/ContextProvider';
-
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
-          <Route path='/manage-product' element={<ManageProduct />} />
-          <Route path='/manage-order' element={<ManageOrders />} />
-          <Route path='/manage-order/order-details' element={<OrderDetails />} />
+          <Route path="/manage-product" element={<ManageProduct />} />
+          <Route path="/manage-order" element={<ManageOrders />} />
+          <Route
+            path="/manage-order/order-details"
+            element={<OrderDetails />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
